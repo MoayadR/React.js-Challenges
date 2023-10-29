@@ -6,11 +6,12 @@ import { useState } from 'react';
 
 function App() {
   const [colorState , setColorState] = useState('');
+  const [hexValue , setHexValue] = useState('');
 
   return (
     <div className='appDiv'>
-     <SquareDiv colorState = {colorState}/>
-     <ColorInput colorState = {colorState} setColorState = {setColorState}/>
+     <SquareDiv colorState = {colorState} hexValue = {hexValue} />
+     <ColorInput colorState = {colorState} setColorState = {setColorState} setHexValue ={setHexValue}/>
     </div>
   );
 }

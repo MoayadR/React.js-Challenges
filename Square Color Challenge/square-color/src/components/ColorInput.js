@@ -1,6 +1,7 @@
 import React from 'react'
+import colorNames from 'colornames'
 
-const ColorInput = ({colorState , setColorState}) => {
+const ColorInput = ({colorState , setColorState , setHexValue}) => {
   return (
     <div className='ColorInputDiv'>
       <form onSubmit={(e) => e.preventDefault() }>
@@ -9,7 +10,10 @@ const ColorInput = ({colorState , setColorState}) => {
         autoFocus
         placeholder='Add Color Name'
         value={colorState}
-        onChange={(e) => setColorState(e.target.value)}
+        onChange={(e) => {
+          setColorState(e.target.value);
+          setHexValue(colorNames(e.target.value));
+        }}
         ></input>
       </form>
     </div>
