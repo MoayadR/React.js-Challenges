@@ -31,7 +31,7 @@ const SquareDiv = ({colorState , hexValue}) => {
 
   return (
     <div className='SquareDiv' style={{backgroundColor:colorState||'white' , color:isBright(hexValue)?"black":"white"}}>
-        <p>{colorState || "Empty Value"}</p>
+        <p> {(colorState[0] != '#' && colorState) || (colorState.length == 0 && "Empty Value") }</p>
         <p>{hexValue}</p>
     </div>
   )

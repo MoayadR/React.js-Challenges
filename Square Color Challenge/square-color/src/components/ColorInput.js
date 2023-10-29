@@ -12,7 +12,7 @@ const ColorInput = ({colorState , setColorState , setHexValue}) => {
         value={colorState}
         onChange={(e) => {
           setColorState(e.target.value);
-          setHexValue(colorNames(e.target.value));
+          setHexValue(e.target.value[0] =='#'? e.target.value : colorNames(e.target.value));
         }}
         ></input>
       </form>
