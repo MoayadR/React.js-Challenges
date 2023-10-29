@@ -5,12 +5,14 @@ const ColorInput = ({colorState , setColorState}) => {
     <div className='ColorInputDiv'>
       <form onSubmit={(e) => e.preventDefault() }>
         <input type='text'
-                value={colorState}
-               onChange={(e) => setColorState(e.target.value)}
-                ></input>
+        required
+        autoFocus
+        placeholder='Add Color Name'
+        value={colorState}
+        onChange={(e) => setColorState(e.target.value)}
+        ></input>
       </form>
     </div>
-    
   )
 }
 
